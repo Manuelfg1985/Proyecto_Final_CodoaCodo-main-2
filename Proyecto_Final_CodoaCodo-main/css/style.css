@@ -1,0 +1,379 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #ecf0f1;
+    color: #2980b9;
+}
+
+body, div, ul, nav, header, footer, a, li, label {
+    margin: 0;
+    padding: 0;
+}
+
+/* ------- HEADER SECTION ------- */
+
+.header {
+    background-color: #3498db;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    container-type: inline-size;
+    container-name: header;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.header__nav {
+    display: block;
+    position: static;
+    height: auto;
+    width: auto;
+    justify-content: space-between;
+}
+
+.header__nav-list {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    gap: 20px;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.header__nav-item {
+    color: #ecf0f1;
+    list-style: none;
+    text-decoration: none;
+}
+
+.header__nav-item:is(:hover, :active) {
+    text-decoration: underline;
+}
+
+.header__logo {
+    max-width: 100%;
+    width: 50px;
+    margin: 10px 20px;
+    border-radius: 25px;
+}
+
+
+/* ----------------------------- Main content styles -------------------------------- */
+
+
+.profile, .acerca {
+    container-name: profile;
+    container-type: inline-size;    
+}
+
+.profile__wrapper, .acerca__wrapper, .terminos__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    max-width: 1400px;
+}
+
+.profile__data-container, .acerca__data-container, .terminos__data-container {
+    max-width: 820px;
+    padding: 12px;
+    background-color: #fff;
+    margin: auto;
+}
+
+.acerca__data, .terminos__data {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    align-items: left;
+    border-radius: 25px;
+    box-shadow: 0px 0px 9px #0002;  
+}
+
+.profile h1 {
+    margin-bottom: 10px;
+    color: #2980b9;
+}
+
+.profile h2, h3, h4 {   
+    margin: 10px; 
+    color: #2980b9;
+}
+
+.profile__img-container {
+    display: flex;
+    justify-content: center;
+    max-height: 550px;
+    overflow: hidden;    
+}
+.profile__img {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.profile__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+/* --------------------------------- PROFILE QUERIES ----------------------------- */
+
+@container profile (min-width:56.25rem){
+    .profile__wrapper {
+        flex-direction: row;
+        padding: 20px;
+        background-color: transparent;
+        height: auto;
+        margin: auto;
+    }
+
+    .profile__data-container {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0px 25px 25px 0px;
+        box-shadow: 0px 0px 9px #0002;        
+}
+
+    .profile__description-title {
+        margin-top: 0;
+        font-size: 3rem;
+        text-wrap: balance;
+    }
+
+    .profile__data {
+        max-width: 820px;
+    }
+
+    .profile__img-container {
+        max-height: initial;
+        border-radius: 25px 0px 0px 25px;
+        background-color: #2c3e50;
+    }
+
+    .profile__img {
+        height: 100%;
+        width: 450px;
+        object-fit: cover;
+    }
+}
+
+.catalogue {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    container-name: portfolio;
+    container-type: inline-size;
+}
+
+.catalogue h2 {
+color: #ecf0f1;
+}
+
+.catalogue__title{
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+.catalogue__cabins-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+    gap: 12px;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.catalogue__cabin{
+    background-image:linear-gradient(#0009, #0009);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    border-radius: 12px;
+}
+
+.catalogue__cabin:hover {
+    opacity: 0.74;
+    outline: 2px solid #fff7;
+}
+
+.catalogue__cabin:first-child{
+    background-image:linear-gradient(#0009, #0009), url("/Proyecto_Final_CodoaCodo-main/img/IMG\ \ \(1\).jpeg");
+}
+.catalogue__cabin:nth-child(2){
+    background-image:linear-gradient(#0009, #0009), url("/Proyecto_Final_CodoaCodo-main/img/IMG\ \ \(2\).jpeg");
+}
+.catalogue__cabin:nth-child(3){
+    background-image:linear-gradient(#0009, #0009), url("/Proyecto_Final_CodoaCodo-main/img/IMG\ \ \(3\).jpeg");
+}
+.catalogue__cabin:nth-child(4){
+    background-image:linear-gradient(#0009, #0009), url("/Proyecto_Final_CodoaCodo-main/img/IMG\ \ \(4\).jpeg");
+}
+.catalogue__cabin:nth-child(5){
+    background-image:linear-gradient(#0009, #0009), url("/Proyecto_Final_CodoaCodo-main/img/IMG\ \ \(5\).jpeg");
+}
+.catalogue__cabin:nth-child(6){
+    background-image:linear-gradient(#0009, #0009), url("/Proyecto_Final_CodoaCodo-main/img/IMG\ \ \(6\).jpeg");
+}
+
+/* --------------------------------- CATALOGUE QUERIES -------------------------------- */
+
+@media (min-width: 56.25rem) {
+    .catalogue__cabins-container{
+        grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
+    }
+
+    .catalogue__cabin:first-child{
+        grid-column: span 1;
+    }
+
+    .catalogue__cabin:nth-child(6){
+        grid-column: span 1;
+    }
+}
+@media (min-width: 81.25rem) {
+    .catalogue__cabins-container{
+        grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
+    }
+
+    .catalogue__cabin:first-child{
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .catalogue__cabin:nth-child(6){
+        grid-column: span 4;
+    }
+}
+
+/* --------------- CONTACT SECTION ----------------- */
+.form {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    container-name: form;
+    container-type: inline-size;
+}
+
+.form__form {
+    padding: 12px;
+    max-width: 500px;
+    width: 100%;
+    display: grid;
+    gap: 12px;
+    background-image: linear-gradient(#0032,#0037);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 40px #0006;
+    margin-bottom: 30px;
+    background-color: #e2eaff;
+}
+
+.form__input-container :is(input,textarea){
+    width: 100%;
+    padding: 9px;
+    font-size: 16px;
+    margin: 4px;
+    border: none;
+    box-shadow: 1px 1px 2px #003;
+}
+
+.form__input-container textarea {
+    resize: none;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.form__input-container input[type="submit"] {
+    padding: 12px;
+    background-color: #26a;
+    color: #fff;
+}
+.form__input-container input[type="reset"] {
+    padding: 12px;
+    background-color: #26a;
+    color: #fff;
+}
+
+.form__title{
+    font-size: 2.4rem;
+    color: #26a;
+}
+.select .select	
+
+
+/* --------------- CONTACT QUERIES ----------------- */
+@media (min-width: 56.25rem) {
+    .form__form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "name lastname"
+        "email email"
+        "message message"
+        "button button"
+        ;        
+    }
+
+    .form__input-container:first-child(1){
+        grid-area: name;
+    }
+    .form__input-container:nth-child(2){
+        grid-area: lastname;
+    }
+    .form__input-container:nth-child(3){
+        grid-area: email;
+    }
+    .form__input-container:nth-child(4){
+        grid-area: message;
+    }
+    .form__input-container:nth-child(5){
+        grid-area: button;
+    }
+}
+
+/* --------------------------------------- Map Section --------------------------------*/
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;    
+}
+
+.map__content{
+    max-width: 100%;
+    border: #0002 solid 2px;
+    border-radius: 12px;
+}
+
+/* --------------------------------------- Footer Section --------------------------------*/
+
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #bdc3c7;
+    color: #2980b9;
+    font-size: 20px;
+}
